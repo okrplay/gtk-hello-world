@@ -18,7 +18,8 @@ fn main() {
     hw_window.set_title("helloRube");
     hw_window.set_default_size(800, 400);
 
-    let hw_label = Label::new("Hello World!");
+    let hw_label = Label::new(None);
+    hw_label.set_markup("<span font='72'>Hello World!</span>");
 
     hw_window.add(&hw_label);
     hw_window.show_all();
