@@ -1,6 +1,6 @@
 [package]
 name = "gtk-hello-world"
-version = "0.2.2"
+version = "0.2.3"
 authors = ["okrplay <32576280+okrplay@users.noreply.github.com>"]
 
 [dependencies]

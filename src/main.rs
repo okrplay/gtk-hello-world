@@ -16,7 +16,7 @@ fn main() {
     }
 
     let hw_window = Window::new(WindowType::Toplevel);
-    hw_window.set_title("helloRube");
+    hw_window.set_title("HelloRube");
     hw_window.set_default_size(800, 400);
 
     let hw_label = Label::new(None);
