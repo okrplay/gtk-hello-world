@@ -6,7 +6,23 @@
 extern crate gtk;
 
 use gtk::prelude::*;
+use gtk::{Window, WindowType};
 
 fn main() {
-    println!("Hello, world!");
+    if gtk::init().is_err() {
+        println!("GTK init failed.");
+        return;
+    }
+
+    let hw_window = Window::new(WindowType::Toplevel);
+    hw_window.set_title("helloRube");
+    hw_window.set_default_size(800, 400);
+    hw_window.show_all();
+
+    hw_window.connect_delete_event(|_, _| {
+        gtk::main_quit();
+        Inhibit(false)
+    });
+
+    gtk::main();
 }
